@@ -6,16 +6,19 @@ import {
 	PartyPopper,
 	ShoppingBag,
 	LucideIcon,
+	ArrowUpRight,
 } from "lucide-react";
 import Image from "next/image";
 // import { Button } from "../ui/button";
 
 export const ProductDropdown = () => {
 	return (
-		<div className="max-w-[1280px] mx-auto grid grid-cols-2 gap-10">
+		<div className="max-w-[1280px] mx-auto flex justify-between gap-10">
 			<div className="flex flex-col gap-7">
-				<p>product</p>
-				<div className="grid grid-cols-2 gap-6 ">
+				<p className="text-[#a1a3a5] font-medium text-[13px] tracking-[-.015em] leading-[1.3]">
+					Products
+				</p>
+				<ul className="grid grid-cols-2 gap-6 place-items-stretch">
 					{products.map((el, i) => (
 						<Products
 							key={i}
@@ -24,17 +27,26 @@ export const ProductDropdown = () => {
 							description={el.description}
 						/>
 					))}
-				</div>
+				</ul>
 			</div>
-			<div className="flex flex-col justify-center">
-				<div className="h-[280px] w-[470px] self-end overflow-hidden relative rounded-[20px] group">
+			<div className="flex-1 flex flex-col justify-center">
+				<div className="h-[280px] w-full max-w-[470px] self-end overflow-hidden relative rounded-[20px] group cursor-pointer">
 					<Image
-						src={"https://picsum.photos/500/280"}
-						alt={"random image"}
-						height={280}
+						src={`https://picsum.photos/seed/455/500/280`}
+						alt="random"
 						width={470}
-						className="group-hover:scale-105 transition-all duration-300 ease-in-out"
+						height={280}
+						className="group-hover:scale-105 transition-all duration-300 absolute z-[1] inset-[-2px] h-[calc(100%+4px)] w-[calc(100%+4px)]"
 					/>
+					<div className="absolute z-10 inset-0 flex flex-col justify-between items-start p-5 bg-gradient-to-t from-black/60 to-black/60 text-white">
+						<div className="w-8 h-8 rounded-full bg-white/15 text-white/76 grid place-items-center self-end">
+							<ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+						</div>
+						<p className="text-[20px] font-medium leading-[1.2] tracking-[-.0125em]">
+							How Talkin Tacos increased direct online sales to
+							$120,000/m by using Owner.com
+						</p>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -52,15 +64,19 @@ const Products = ({
 }) => {
 	return (
 		// <Button variant={"ghost"} size="nothing">
-		<div className="flex gap-4">
-			<div>
-				<Icon />
+		<li className="max-w-[300px] h-full w-full">
+			<div className="flex gap-4 rounded-[2px] p-2 cursor-pointer hover:bg-[#f1f1f2]">
+				<div>
+					<Icon className="h-6 w-6 text-[#787a7d]" />
+				</div>
+				<div className="flex flex-col gap-0.5">
+					<p className="font-medium leading-[1.35]">{name}</p>
+					<span className="text-[#787a7d] text-sm leading-[1.35] tracking-[-.0125em] font-medium">
+						{description}
+					</span>
+				</div>
 			</div>
-			<div className="flex flex-col gap-0.5">
-				<p>{name}</p>
-				<span>{description}</span>
-			</div>
-		</div>
+		</li>
 		// </Button>
 	);
 };

@@ -13,11 +13,13 @@ import {
 } from "../ui/navigation-menu";
 import { DropdownWrapper } from "./dropdown";
 import { ProductDropdown } from "./productDropdown";
+import { CompanyDropdown } from "./companyDropdown";
+import { ResourcesDropdown } from "./resourcesDropdown";
 
 const Nav = () => {
 	return (
 		<>
-			{/* <div className="h-20" /> */}
+			{/* <div className="h-28" /> */}
 			<div className="h-20 px-12 fixed top-0 left-0 w-screen bg-white z-50">
 				<div className="flex items-center gap-12 max-w-[1418px] mx-auto w-full h-full">
 					<div>
@@ -61,9 +63,7 @@ const Nav = () => {
 								</NavigationMenuTrigger>
 								<NavigationMenuContent>
 									<DropdownWrapper>
-										<div className="max-w-[1280px] mx-auto bg-blue-200 flex gap-10">
-											Extra
-										</div>
+										<CompanyDropdown />
 									</DropdownWrapper>
 								</NavigationMenuContent>
 							</NavigationMenuItem>
@@ -73,9 +73,7 @@ const Nav = () => {
 								</NavigationMenuTrigger>
 								<NavigationMenuContent>
 									<DropdownWrapper>
-										<div className="max-w-[1280px] mx-auto bg-blue-200 flex gap-10">
-											Extra
-										</div>
+										<ResourcesDropdown />
 									</DropdownWrapper>
 								</NavigationMenuContent>
 							</NavigationMenuItem>
@@ -94,7 +92,7 @@ const Nav = () => {
 					</div>
 				</div>
 			</div>
-			{/* <ProductDropdown /> */}
+			{/* <CompanyDropdown /> */}
 		</>
 	);
 };
