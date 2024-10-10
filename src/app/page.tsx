@@ -1,4 +1,7 @@
+import { Beliefs } from "@/components/beliefs";
 import { Feature } from "@/components/feature";
+import { Footer } from "@/components/footer";
+import { Guide } from "@/components/guide";
 import { Hero } from "@/components/hero";
 import { Intro } from "@/components/Intro";
 import Nav from "@/components/nav";
@@ -19,7 +22,10 @@ export default function Home() {
 				<Testimonial1 />
 				<Feature />
 				<Testimonial2 />
+				<Beliefs />
+				<Guide />
 			</main>
+			<Footer />
 		</>
 	);
 }
