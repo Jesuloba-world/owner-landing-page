@@ -19,7 +19,7 @@ export const Hero = () => {
 								online experience – just like Domino&apos;s and
 								Chipotle.
 							</p>
-							<div className="flex gap-4 flex-wrap">
+							<div className="flex gap-2 md:gap-4 flex-wrap">
 								<Button morphArrow>Get a free demo</Button>
 								<Button variant={"secondary"} morphArrow>
 									How owner works

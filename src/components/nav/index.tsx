@@ -81,7 +81,7 @@ const Nav = () => {
 						</NavigationMenuList>
 					</NavigationMenu>
 
-					<div className="flex gap-4 items-center">
+					<div className="flex gap-2 md:gap-4 items-center">
 						<Button
 							variant={"nothing"}
 							size={"link"}
