@@ -1,7 +1,7 @@
-import type { Config } from "tailwindcss";
-const plugin = require("tailwindcss/plugin");
+// import type { Config } from "tailwindcss";
+import animate from "tailwindcss-animate";
 
-const config: Config = {
+const config = {
 	darkMode: ["class"],
 	content: [
 		"./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -14,7 +14,7 @@ const config: Config = {
 				background: "hsl(var(--background))",
 				foreground: {
 					DEFAULT: "hsl(var(--foreground))",
-					"2": "hsl(var(--foreground-2))",
+					2: "hsl(var(--foreground-2))",
 				},
 				card: {
 					DEFAULT: "hsl(var(--card))",
@@ -49,11 +49,11 @@ const config: Config = {
 				input: "hsl(var(--input))",
 				ring: "hsl(var(--ring))",
 				chart: {
-					"1": "hsl(var(--chart-1))",
-					"2": "hsl(var(--chart-2))",
-					"3": "hsl(var(--chart-3))",
-					"4": "hsl(var(--chart-4))",
-					"5": "hsl(var(--chart-5))",
+					1: "hsl(var(--chart-1))",
+					2: "hsl(var(--chart-2))",
+					3: "hsl(var(--chart-3))",
+					4: "hsl(var(--chart-4))",
+					5: "hsl(var(--chart-5))",
 				},
 			},
 			borderRadius: {
@@ -64,7 +64,7 @@ const config: Config = {
 		},
 	},
 	plugins: [
-		require("tailwindcss-animate"),
+		animate,
 		function ({ addUtilities }) {
 			const newUtilities = {
 				".scrollbar-hide": {
