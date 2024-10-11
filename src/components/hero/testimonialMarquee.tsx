@@ -24,9 +24,9 @@ const TestimonialScroll = () => {
 	return (
 		<div className="flex overflow-x-auto items-stretch scrollbar-hide">
 			{marqueeData.map((el, i) => (
-				<div key={i} className="flex-shrink-0 h-full w-full">
-					<TestimonialCard {...el} />
-				</div>
+				// <div key={i} className="flex-shrink-0 h-full w-full">
+				<TestimonialCard key={i} {...el} />
+				// </div>
 			))}
 		</div>
 	);
@@ -41,8 +41,8 @@ const TestimonialCard = ({
 	const randomSeed = Math.floor(Math.random() * 1000);
 	const moreThanOneOwner = owners.length > 1;
 	return (
-		<div className="bg-[#F0EEF6] rounded-[40px] h-[450px] md:h-[500px] mr-3 flex overflow-hidden">
-			<div className="rounded-r-[40px] overflow-hidden aspect-[465/504]">
+		<div className="bg-[#F0EEF6] shrink-0 rounded-[32px] md:rounded-[40px] h-auto md:h-[440px] lg:h-[500px] mr-3 flex overflow-hidden">
+			<div className="rounded-[32px] md:rounded-r-[40px] overflow-hidden sm:max-w-[340px] md:max-w-none aspect-auto md:aspect-[465/504]">
 				<Image
 					src={`https://picsum.photos/seed/${randomSeed}/426/500`}
 					alt="random image"

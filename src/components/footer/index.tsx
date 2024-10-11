@@ -56,7 +56,7 @@ export const Footer = () => {
 								<p className="text-[#6c6f75] text-xs leading-[1.3] tracking-[-.016em]">
 									2024 © Owner. All right reserved.
 								</p>
-								<ul className="flex gap-2.5">
+								<ul className="flex gap-2.5 flex-wrap">
 									{legalList.map((el, i) => (
 										<li key={i}>
 											<p className="cursor-pointer text-[#6c6f75] hover:text-white text-xs leading-[1.3] tracking-[-.016em]">
