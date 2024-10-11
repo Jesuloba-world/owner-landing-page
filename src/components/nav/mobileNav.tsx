@@ -18,7 +18,7 @@ export const MobileNav = () => {
 					<Hamburger isOpen={isOpen} />
 				</Button>
 			</DrawerTrigger>
-			<DrawerContent className="h-[calc(100%-64px)] top-16 rounded-none after:hidden mt-0">
+			<DrawerContent className="h-[calc(100%-64px)] top-16 rounded-none after:hidden mt-0 overflow-y-auto">
 				<div className="px-[5%] flex flex-col items-start justify-start">
 					<Button
 						variant={"nothing"}
