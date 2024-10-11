@@ -12,14 +12,14 @@ export const Hero = () => {
 								Making online growth easy for restaurants
 							</h1>
 						</div>
-						<div className="max-w-[430px] space-y-7">
+						<div className="max-w-[430px] w-full space-y-7">
 							<p className="font-medium leading-[1.35] text-foreground-2">
 								Thousands of restaurant owners use Owner.com to
 								succeed online. Grow your sales with a great
 								online experience – just like Domino&apos;s and
 								Chipotle.
 							</p>
-							<div className="flex gap-4">
+							<div className="flex gap-4 flex-wrap">
 								<Button morphArrow>Get a free demo</Button>
 								<Button variant={"secondary"} morphArrow>
 									How owner works
