@@ -41,7 +41,7 @@ const TestimonialCard = ({
 	const randomSeed = Math.floor(Math.random() * 1000);
 	const moreThanOneOwner = owners.length > 1;
 	return (
-		<div className="bg-[#F0EEF6] shrink-0 rounded-[32px] md:rounded-[40px] h-auto md:h-[440px] lg:h-[500px] mr-3 flex overflow-hidden">
+		<div className="bg-[#F0EEF6] shrink-0 rounded-[32px] md:rounded-[40px] h-[440px] lg:h-[500px] mr-3 flex overflow-hidden">
 			<div className="rounded-[32px] md:rounded-r-[40px] overflow-hidden sm:max-w-[340px] md:max-w-none aspect-auto md:aspect-[465/504]">
 				<Image
 					src={`https://picsum.photos/seed/${randomSeed}/426/500`}
