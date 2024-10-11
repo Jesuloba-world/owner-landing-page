@@ -15,19 +15,20 @@ import { DropdownWrapper } from "./dropdown";
 import { ProductDropdown } from "./productDropdown";
 import { CompanyDropdown } from "./companyDropdown";
 import { ResourcesDropdown } from "./resourcesDropdown";
+import { MobileNav } from "./mobileNav";
 
 const Nav = () => {
 	return (
 		<>
 			{/* <div className="h-28" /> */}
-			<div className="h-20 px-12 fixed top-0 left-0 w-screen bg-white z-50">
-				<div className="flex items-center gap-12 max-w-[1418px] mx-auto w-full h-full">
+			<div className="h-16 lg:h-20 px-[5%] lg:px-12 fixed top-0 left-0 w-screen bg-white z-50">
+				<div className="flex items-center gap-12 max-w-[1418px] mx-auto w-full h-full justify-between lg:justify-start">
 					<div>
 						<Link href="/">
 							<Image src={Logo} alt={"logo"} />
 						</Link>
 					</div>
-					<NavigationMenu className="mr-auto">
+					<NavigationMenu className="mr-auto hidden lg:block">
 						<NavigationMenuList>
 							<NavigationMenuItem>
 								<NavigationMenuTrigger>
@@ -89,6 +90,7 @@ const Nav = () => {
 							<Link href="/login">Login</Link>
 						</Button>
 						<Button variant="default">Get a free demo</Button>
+						<MobileNav />
 					</div>
 				</div>
 			</div>

@@ -4,7 +4,7 @@ import { footerElements } from "./constant";
 
 export const Columns = () => {
 	return (
-		<div className="flex flex-wrap justify-start gap-x-[5%] gap-y-20">
+		<div className="flex flex-col lg:flex-row flex-wrap justify-start gap-16 lg:gap-x-[5%] lg:gap-y-20">
 			<div className={footerColumnStyles()}>
 				<p className={footerColumnHead()}>products</p>
 				<ul

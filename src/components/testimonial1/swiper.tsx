@@ -45,7 +45,7 @@ export const TestimonialSwiper = () => {
 					</SwiperSlide>
 				))}
 			</Swiper>
-			<div className="py-5 px-16 flex items-center justify-between">
+			<div className="py-5 px-16 flex items-center justify-center md:justify-between">
 				<Button
 					variant={"nothing"}
 					size={"nothing"}
@@ -55,7 +55,7 @@ export const TestimonialSwiper = () => {
 					<div className="bg-[#00000014] rounded-full w-8 h-8 flex items-center justify-center">
 						<ArrowLeft className="w-4 h-4 text-secondary-foreground transition-transform duration-500 group-hover:-translate-x-1" />
 					</div>
-					<p className="text-[15px] font-medium leading-[1.45] tracking-[-.02em]">
+					<p className="text-[15px] font-medium leading-[1.45] tracking-[-.02em] hidden md:block">
 						<span className="text-[#787a7d]">Previous</span>{" "}
 						{prev?.establishment}
 					</p>
@@ -66,7 +66,7 @@ export const TestimonialSwiper = () => {
 					className="p-[6px] pl-4 gap-2 group"
 					onClick={() => swiper?.slideNext()}
 				>
-					<p className="text-[15px] font-medium leading-[1.45] tracking-[-.02em]">
+					<p className="text-[15px] font-medium leading-[1.45] tracking-[-.02em] hidden md:block">
 						<span className="text-[#787a7d]">Next</span>{" "}
 						{next?.establishment}
 					</p>

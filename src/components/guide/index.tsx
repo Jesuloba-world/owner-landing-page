@@ -6,16 +6,18 @@ import { VideoPlay } from "@/assets/play";
 
 export const Guide = () => {
 	return (
-		<section className="bg-[#f7f5f2] py-[160px]">
+		<section className="bg-[#e0e0e1] border-t border-[#cececf] lg:border-none lg:bg-[#f7f5f2] py-20 lg:py-[160px]">
 			<SectionWrapper>
 				<div className="flex flex-col gap-10">
-					<div className="flex items-center justify-between gap-6">
-						<h2 className="max-w-[560px] text-[44px] font-medium leading-[1.1] tracking-[-.018em]">
+					<div className="flex flex-col md:flex-row items-center justify-between gap-6">
+						<h2 className="max-w-none md:max-w-[560px] text-[36px] md:text-[44px] font-medium leading-[1.2] tracking-[-.011em] md:leading-[1.1] md:tracking-[-.018em]">
 							See our free guides on growing your restaurant
 						</h2>
-						<Button morphArrow>See more guides</Button>
+						<Button morphArrow className="hidden md:flex">
+							See more guides
+						</Button>
 					</div>
-					<div className="flex gap-2">
+					<div className="flex flex-col lg:flex-row gap-2">
 						<Guidecard
 							text="3 Best Restaurant Marketing Ideas For 2024 (with AI Strategies)"
 							isVideo
@@ -40,7 +42,7 @@ const Guidecard = ({ text, isVideo }: { text: string; isVideo?: boolean }) => {
 				height={447}
 				className="group-hover:scale-110 transition-all duration-300 absolute z-[1] inset-[-2px] h-[calc(100%+4px)] w-[calc(100%+4px)]"
 			/>
-			<div className="relative z-[2] bg-gradient-to-b from-transparent to-black/60 flex items-end justify-between p-8 overflow-hidden gap-[15%]">
+			<div className="relative z-[2] bg-gradient-to-b from-transparent to-black/60 flex items-end justify-between w-full p-5 md:p-6 lg:p-8 overflow-hidden gap-[15%]">
 				<p className="text-lg font-medium leading-[1.35] tracking-[-.0125em] text-white">
 					{text}
 				</p>

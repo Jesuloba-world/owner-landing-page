@@ -15,9 +15,17 @@ export const Testimonial2Swiper = () => {
 
 	useEffect(() => {
 		let intervalId: NodeJS.Timeout;
+		setProgress(0);
+
 		if (swiper) {
 			intervalId = setInterval(() => {
-				setProgress((prev) => (prev + 1) % 101);
+				setProgress((prev) => {
+					if (prev >= 100) {
+						clearInterval(intervalId);
+						return 100;
+					}
+					return prev + 1;
+				});
 			}, 30);
 		}
 		return () => clearInterval(intervalId);

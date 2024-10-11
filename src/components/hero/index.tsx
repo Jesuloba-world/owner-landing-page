@@ -3,12 +3,12 @@ import { TestimonialMarquee } from "./testimonialMarquee";
 
 export const Hero = () => {
 	return (
-		<section className="pt-[22vh] pb-20 overflow-hidden">
+		<section className="pt-[116px] md:pt-[22vh] pb-20 overflow-hidden">
 			<div className="px-[5%]">
-				<div className="w-full max-w-[1416px] mx-auto flex flex-col gap-20">
+				<div className="w-full max-w-[1416px] mx-auto flex flex-col gap-[60px] md:gap-20">
 					<div className="flex justify-start items-end flex-wrap gap-8">
 						<div className="max-w-[800px]">
-							<h1 className="text-[72px] font-medium leading-[1.03] tracking-[-.027em]">
+							<h1 className="text-[44px] md:text-[72px] font-medium leading-[1.1] md:leading-[1.03] tracking-[-.018em] md:tracking-[-.027em]">
 								Making online growth easy for restaurants
 							</h1>
 						</div>

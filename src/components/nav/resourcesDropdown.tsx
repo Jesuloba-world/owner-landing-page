@@ -1,20 +1,28 @@
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import { Button } from "../ui/button";
+import { navLinkStyles } from "./productDropdown";
 
 export const ResourcesDropdown = () => {
 	return (
 		<div className="max-w-[1280px] mx-auto flex justify-between gap-10">
-			<div className="flex flex-col gap-7">
+			<div className="flex flex-col gap-4 lg:gap-7">
 				<p className="text-[#a1a3a5] font-medium text-[13px] tracking-[-.015em] leading-[1.3]">
 					Learn
 				</p>
-				<ul className="flex flex-col -ml-4 -mt-2">
+				<ul className="flex flex-col gap-[10px] lg:gap-0 lg:-ml-4 lg:-mt-2">
 					{story.map((el, i) => (
 						<li key={i}>
 							<Button
 								variant={"ghost"}
-								className="text-[20px] font-medium tracking-[-.0125em] leading-[1.2] py-2"
+								className="text-[20px] font-medium tracking-[-.0125em] leading-[1.2] py-2 hidden lg:flex"
+							>
+								{el}
+							</Button>
+							<Button
+								className={navLinkStyles({
+									className: "lg:hidden",
+								})}
 							>
 								{el}
 							</Button>
@@ -22,7 +30,7 @@ export const ResourcesDropdown = () => {
 					))}
 				</ul>
 			</div>
-			<div className="flex-1 flex justify-end gap-2">
+			<div className="flex-1 hidden lg:flex justify-end gap-2">
 				<div className="h-[280px] w-full max-w-[470px] self-end overflow-hidden relative rounded-[20px] group cursor-pointer">
 					<Image
 						src={`https://picsum.photos/seed/sushi/500/280`}

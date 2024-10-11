@@ -7,7 +7,7 @@ export const ReviewBox = () => {
 			<div className="w-[75px]">
 				<FiveStar />
 			</div>
-			<p className="text-[15px] leading-[1.45] tracking-[-.02em] font-medium">
+			<p className="text-base md:text-[15px] leading-[1.45] tracking-[-.02em] font-medium">
 				The branded website and Online ordering platform is perfect for
 				our guest and growing my business.
 			</p>
